@@ -52,20 +52,24 @@
 ## 📫 Let's Connect  
 
 <p align="center">
-  <a href="zeus881.github.io/Sanjay-Kumar-portfolio/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
+  <a href="https://zeus881.github.io/Sanjay-Kumar-portfolio/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Portfolio" width="40" height="40"/>
   </a>
-  <a href="linkedin.com/in/sanjay-kumar-7689531b5" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/sanjay-kumar-7689531b5/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="40" height="40"/>
   </a>
+  &nbsp;
   <a href="https://x.com/Zeus_092001" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter"/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" alt="Twitter" width="40" height="40"/>
   </a>
+  &nbsp;
   <a href="mailto:sanjaykumarr99009@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" width="40" height="40"/>
   </a>
 </p>
 
-🚀 Let's build something amazing together!
+🚀 **Let's build something amazing together!**
+
 
 
