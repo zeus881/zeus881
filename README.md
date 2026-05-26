@@ -1,5 +1,9 @@
 <div align="center">
 
+<a href="https://zeus881.github.io/Sanjay-Kumar-portfolio/" target="_blank">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7F77DD,50:1D9E75,100:185FA5&height=220&section=header&text=Sanjay%20Kumar&fontSize=52&fontColor=ffffff&fontAlignY=38&desc=Software%20Engineer%20%7C%20Backend%20%C2%B7%20Cloud%20%C2%B7%20AI%20%C2%B7%20Solution%20Architecture&descSize=15&descAlignY=58&descColor=AFA9EC&animation=fadeIn" width="100%"/>
+</a>
+
 ![Profile Views](https://komarev.com/ghpvc/?username=zeus881&color=6366f1&style=flat-square&label=PROFILE+VIEWS)
 &nbsp;
 ![GitHub followers](https://img.shields.io/github/followers/zeus881?style=flat-square&color=6366f1&label=FOLLOWERS)
@@ -9,10 +13,6 @@
 ---
 
 <div align="center">
-
-# Sanjay Kumar
-
-### 🛠️ Software Engineer · Backend & Solution Architecture · AI Automation · Cloud Infrastructure
 
 📍 Greater Noida, India &nbsp;|&nbsp; 📧 [sanjaykumarr99009@gmail.com](mailto:sanjaykumarr99009@gmail.com) &nbsp;|&nbsp; 📱 +91-9076799009
 
