@@ -16,10 +16,17 @@
 
 📍 Greater Noida, India &nbsp;|&nbsp; 📧 [sanjaykumarr99009@gmail.com](mailto:sanjaykumarr99009@gmail.com) &nbsp;|&nbsp; 📱 +91-9076799009
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sanjay-kumar-7689531b5/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-111827?style=for-the-badge&logo=vercel&logoColor=white)](https://sanjaykumar-potfolio.netlify.app)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/Zeus_092001)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sanjaykumarr99009@gmail.com)
+<a href="https://www.linkedin.com/in/sanjay-kumar-7689531b5/" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="48" height="48" alt="LinkedIn" title="LinkedIn"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://sanjaykumar-potfolio.netlify.app" target="_blank">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" width="48" height="48" alt="Portfolio" title="Portfolio"/>
+</a>
+&nbsp;&nbsp;
+<a href="mailto:sanjaykumarr99009@gmail.com">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" width="48" height="48" alt="Email" title="Email"/>
+</a>
 
 </div>
 
