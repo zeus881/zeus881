@@ -110,10 +110,23 @@ Previously at **Yottec System LLP**, I led defence software projects in collabor
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=zeus881&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180px"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeus881&layout=compact&theme=tokyonight&hide_border=true" height="180px"/>
+<img src="https://github-readme-stats.vercel.app/api?username=zeus881&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" height="180px"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeus881&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" height="180px"/>
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=zeus881&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
+</div>
+
+<div align="center">
+
+![commits](https://img.shields.io/badge/Total%20Commits-500%2B-6366f1?style=flat-square&logo=github)
+![repos](https://img.shields.io/badge/Public%20Repos-20%2B-1D9E75?style=flat-square&logo=github)
+![experience](https://img.shields.io/badge/Experience-2%2B%20Years-185FA5?style=flat-square&logo=github)
+![open source](https://img.shields.io/badge/Open%20Source-Contributor-FAC775?style=flat-square&logo=github)
+
+</div>
+
+<div align="center">
+
+[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=zeus881&theme=tokyo-night&hide_border=true&area=true)](https://github.com/zeus881)
 
 </div>
 
