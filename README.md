@@ -110,8 +110,10 @@ Previously at **Yottec System LLP**, I led defence software projects in collabor
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=zeus881&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" height="180px"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeus881&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" height="180px"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=zeus881&theme=tokyonight" width="100%"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=zeus881&theme=tokyonight" height="180px"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=zeus881&theme=tokyonight" height="180px"/>
 
 </div>
 
@@ -168,3 +170,4 @@ Shambhunath Institute of Engineering and Technology, Prayagraj *(2021 – 2024)*
 ⭐ If you find my work useful, consider starring my repos!
 
 </div>
+
