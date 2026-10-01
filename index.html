@@ -1,432 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Sanjay Kumar — GitHub Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanjay Kumar | Software Engineer</title>
+<meta name="description" content="Sanjay Kumar, Software Engineer. Backend, real-time IoT, cloud and AI automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #0D1117; color: #c9d1d9; font-family: 'Segoe UI', Arial, sans-serif; }
+:root{
+  --bg:#0A1128; --bg2:#071F26; --panel:#101A3A; --line:rgba(139,131,240,.22);
+  --violet:#8B83F0; --violet-soft:#B9B3FF; --teal:#3FE0B5; --blue:#58A6FF;
+  --text:#E6E4FA; --muted:#A9B4D0;
+  --sans:'Sora','Segoe UI',system-ui,sans-serif;
+  --mono:'JetBrains Mono','Fira Code',Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);color:var(--text);line-height:1.65;
+  background:linear-gradient(160deg,var(--bg) 0%,#0C1633 45%,var(--bg2) 100%) fixed;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{ /* faint engineering grid */
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section,header{scroll-margin-top:64px}
+section{padding:88px 0}
+h2{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;letter-spacing:-.02em;margin-bottom:28px}
+h3{font-size:1.15rem;font-weight:600}
+p{color:var(--muted)}
 
-  /* ── BANNER ── */
-  .banner { position: relative; width: 100%; height: 220px; background: #060B14; overflow: hidden; }
-  .banner canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-  .banner-content { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: 0 52px; pointer-events: none; }
-  .banner-tag { font-family: 'Courier New', monospace; font-size: 12px; color: #5DCAA5; letter-spacing: 2.5px; margin-bottom: 10px; }
-  .banner-name { font-size: 50px; font-weight: 800; letter-spacing: 1px; line-height: 1; margin-bottom: 10px; background: linear-gradient(90deg, #fff 0%, #C8C4FF 55%, #5DCAA5 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .banner-role { font-size: 12px; color: #3d5068; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 18px; }
-  .banner-pills { display: flex; gap: 8px; flex-wrap: wrap; }
-  .pill { font-family: 'Courier New', monospace; font-size: 10.5px; padding: 4px 14px; border-radius: 20px; letter-spacing: 0.5px; }
-  .p-purple { color: #AFA9EC; border: 0.8px solid rgba(127,119,221,0.55); background: rgba(127,119,221,0.09); }
-  .p-teal   { color: #5DCAA5; border: 0.8px solid rgba(29,158,117,0.55);  background: rgba(29,158,117,0.09); }
-  .p-blue   { color: #85B7EB; border: 0.8px solid rgba(24,95,165,0.55);   background: rgba(24,95,165,0.09); }
-  .p-amber  { color: #FAC775; border: 0.8px solid rgba(186,117,23,0.55);  background: rgba(186,117,23,0.09); }
-  .p-coral  { color: #F0997B; border: 0.8px solid rgba(216,90,48,0.55);   background: rgba(216,90,48,0.09); }
-  .accent-bar { position: absolute; left: 36px; top: 50%; transform: translateY(-50%); width: 3px; height: 120px; border-radius: 2px; background: linear-gradient(180deg, #7F77DD, #1D9E75); box-shadow: 0 0 10px rgba(127,119,221,0.6); }
-  .banner-location { position: absolute; bottom: 14px; right: 22px; font-family: 'Courier New', monospace; font-size: 9px; color: #1e2d3d; letter-spacing: 2px; }
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(10,17,40,.7);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--mono);font-weight:600;color:var(--teal);text-decoration:none}
+nav ul{display:flex;gap:24px;list-style:none}
+nav ul a{text-decoration:none;color:var(--muted);font-size:.92rem}
+nav ul a:hover{color:var(--text)}
+@media (max-width:720px){nav ul{display:none}}
 
-  /* ── LAYOUT ── */
-  .container { max-width: 860px; margin: 0 auto; padding: 0 24px 60px; }
+/* ---------- hero ---------- */
+.hero{padding:40px 0 20px;min-height:calc(100vh - 60px);display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:24px;align-items:center}
+.hello{font-family:var(--mono);color:var(--teal);font-size:.95rem;margin-bottom:10px}
+.name{
+  font-size:clamp(2.8rem,7vw,5.2rem);font-weight:800;line-height:1.02;letter-spacing:-.035em;
+  background:linear-gradient(90deg,var(--violet-soft),var(--teal),var(--blue),var(--violet-soft));
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shift 10s linear infinite;
+}
+@keyframes shift{to{background-position:300% 0}}
+.role{font-size:1.3rem;font-weight:600;margin-top:14px}
+.tagline{max-width:46ch;margin-top:10px;font-size:1.05rem}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{font-size:.85rem;padding:7px 14px;border-radius:999px;border:1px solid}
+.pill.t{color:var(--teal);border-color:rgba(63,224,181,.5);background:rgba(63,224,181,.08)}
+.pill.v{color:var(--violet-soft);border-color:rgba(139,131,240,.5);background:rgba(139,131,240,.08)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;font-size:.95rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--teal);color:#062019}
+.btn.ghost{border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.btn.ghost:hover{background:rgba(255,255,255,.07)}
+.stage{position:relative;aspect-ratio:1/1;width:100%;max-width:540px;justify-self:end}
+#sphere{width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+#sphere:active{cursor:grabbing}
+.stage figcaption{position:absolute;bottom:4px;width:100%;text-align:center;font-family:var(--mono);font-size:.75rem;color:var(--muted);opacity:.8}
+@media (max-width:860px){
+  .hero{min-height:auto}
+  .hero .wrap{grid-template-columns:1fr}
+  .stage{justify-self:center;max-width:420px}
+}
 
-  /* ── META BAR ── */
-  .meta-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 20px 0 16px; border-bottom: 0.5px solid #21262d; }
-  .meta-info { font-size: 13px; color: #8b949e; }
-  .meta-info span { margin-right: 18px; }
-  .social-icons { display: flex; gap: 14px; align-items: center; }
-  .social-icons a img { width: 32px; height: 32px; transition: opacity 0.2s; }
-  .social-icons a img:hover { opacity: 0.75; }
-  .badges { display: flex; gap: 8px; flex-wrap: wrap; }
-  .badge-img { height: 20px; }
+/* ---------- terminal ---------- */
+.term{max-width:860px;margin:0 auto;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0E1530;box-shadow:0 30px 80px -30px rgba(63,224,181,.25)}
+.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#141D3E}
+.dot{width:12px;height:12px;border-radius:50%}
+.term-bar span.title{flex:1;text-align:center;font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-right:52px}
+#term{font-family:var(--mono);font-size:.92rem;padding:22px 24px;min-height:300px;white-space:pre-wrap;word-break:break-word}
+#term .p{color:var(--teal)}
+.caret{display:inline-block;width:.6em;height:1.1em;background:var(--teal);vertical-align:text-bottom;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
 
-  /* ── DIVIDER ── */
-  hr { border: none; border-top: 0.5px solid #21262d; margin: 28px 0; }
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
+.about p.lead{font-size:1.15rem;color:var(--text);max-width:52ch}
+.facts{list-style:none;display:grid;gap:14px}
+.facts li{padding-left:16px;border-left:2px solid var(--violet)}
+.facts b{display:block;color:var(--text);font-weight:600}
+.facts span{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
 
-  /* ── SECTION TITLE ── */
-  h2 { font-size: 17px; font-weight: 500; color: #e6edf3; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+/* ---------- experience timeline ---------- */
+.timeline{position:relative;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--teal),var(--violet))}
+.job{position:relative;margin-bottom:44px}
+.job::before{content:"";position:absolute;left:-28px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--teal)}
+.job:last-child::before{border-color:var(--violet)}
+.job header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 20px;align-items:baseline}
+.job .when{font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.job .title{color:var(--violet-soft);font-weight:600;margin:2px 0 12px}
+.job ul{list-style:none;display:grid;gap:8px;max-width:72ch}
+.job li{color:var(--muted);padding-left:22px;position:relative}
+.job li::before{content:"▹";position:absolute;left:0;color:var(--teal)}
+.job li strong{color:var(--text);font-weight:600}
+.note{font-size:.82rem;color:var(--muted);opacity:.75;margin-top:10px}
 
-  /* ── ABOUT ── */
-  .about-box { background: #161b22; border: 0.5px solid #30363d; border-radius: 10px; padding: 18px 22px; font-size: 14px; line-height: 1.8; color: #8b949e; }
-  .about-box strong { color: #c9d1d9; font-weight: 500; }
-  .about-quote { border-left: 3px solid #7F77DD; padding-left: 14px; margin-top: 14px; font-style: italic; color: #7F77DD; font-size: 13.5px; }
+/* ---------- pipeline ---------- */
+.pipe{border:1px solid var(--line);border-radius:16px;padding:28px;background:rgba(16,26,58,.5);overflow-x:auto}
+.pipe svg{min-width:760px;width:100%;height:auto;display:block}
+.flow{stroke-dasharray:6 8;animation:flow 1.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-28}}
 
-  /* ── EXPERIENCE ── */
-  .exp-card { background: #161b22; border: 0.5px solid #30363d; border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; }
-  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
-  .exp-company { font-size: 15px; font-weight: 500; color: #e6edf3; }
-  .exp-role { font-size: 12.5px; color: #8b949e; margin-top: 2px; }
-  .exp-date { font-size: 12px; color: #8b949e; white-space: nowrap; }
-  .current-tag { background: rgba(29,158,117,0.15); color: #5DCAA5; font-size: 11px; padding: 2px 10px; border-radius: 20px; border: 0.5px solid rgba(29,158,117,0.4); }
-  .exp-bullet { font-size: 13px; color: #8b949e; line-height: 1.7; padding-left: 16px; position: relative; margin: 3px 0; }
-  .exp-bullet::before { content: '▸'; position: absolute; left: 0; color: #7F77DD; }
+/* ---------- stack ---------- */
+.stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+.stack h3{font-size:.95rem;color:var(--violet-soft);margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.85rem;padding:5px 11px;border-radius:7px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--text)}
+.tag.hi{border-color:rgba(63,224,181,.45);color:var(--teal)}
 
-  /* ── TECH STACK ── */
-  .stack-group { margin-bottom: 20px; }
-  .stack-label { font-size: 11px; color: #8b949e; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-  .stack-icons { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
-  .stack-icons img { width: 42px; height: 42px; transition: transform 0.2s; }
-  .stack-icons img:hover { transform: scale(1.15); }
+/* ---------- projects ---------- */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj{padding:26px;border-radius:14px;border:1px solid var(--line);background:rgba(16,26,58,.45);transition:border-color .2s,transform .2s}
+.proj:hover{border-color:rgba(63,224,181,.5);transform:translateY(-3px)}
+.proj.big{grid-column:span 2;background:linear-gradient(120deg,rgba(63,224,181,.08),rgba(139,131,240,.08))}
+.proj p{margin:8px 0 16px}
+.proj .tags .tag{font-family:var(--mono);font-size:.75rem}
+@media (max-width:720px){.projects{grid-template-columns:1fr}.proj.big{grid-column:auto}}
 
-  /* ── EXPERTISE ── */
-  .expertise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .expertise-item { background: #161b22; border: 0.5px solid #30363d; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #8b949e; }
-  .expertise-item .label { font-size: 11px; color: #7F77DD; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
-  .expertise-item .tags { color: #8b949e; line-height: 1.7; }
+/* ---------- education ---------- */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.edu ul{list-style:none;display:grid;gap:12px}
+.edu li span{color:var(--muted);font-size:.92rem}
+@media (max-width:720px){.edu{grid-template-columns:1fr}}
 
-  /* ── PROJECTS ── */
-  .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .proj-card { background: #161b22; border: 0.5px solid #30363d; border-radius: 10px; padding: 16px 18px; transition: border-color 0.2s; }
-  .proj-card:hover { border-color: #7F77DD; }
-  .proj-name { font-size: 14px; font-weight: 500; color: #58a6ff; margin-bottom: 6px; }
-  .proj-desc { font-size: 12.5px; color: #8b949e; line-height: 1.6; margin-bottom: 10px; }
-  .proj-stack { display: flex; flex-wrap: wrap; gap: 5px; }
-  .proj-tag { font-size: 10.5px; padding: 2px 9px; border-radius: 20px; background: #21262d; color: #8b949e; border: 0.5px solid #30363d; }
+/* ---------- contact ---------- */
+.contact{text-align:center;padding:100px 0 60px}
+.contact h2{font-size:clamp(2rem,5vw,3.2rem)}
+.contact .cta{justify-content:center}
+footer{text-align:center;padding:30px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
 
-  /* ── STATS ── */
-  .stats-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
-  .stats-row img { border-radius: 8px; height: 165px; }
+/* ---------- reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
 
-  /* ── CERTIFICATIONS ── */
-  .cert-list { display: flex; flex-direction: column; gap: 8px; }
-  .cert-item { display: flex; align-items: center; gap: 12px; background: #161b22; border: 0.5px solid #30363d; border-radius: 8px; padding: 10px 16px; font-size: 13px; }
-  .cert-icon { width: 28px; height: 28px; background: rgba(186,117,23,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
-  .cert-name { font-weight: 500; color: #c9d1d9; }
-  .cert-org { font-size: 12px; color: #8b949e; }
-
-  /* ── EDUCATION ── */
-  .edu-card { background: #161b22; border: 0.5px solid #30363d; border-radius: 10px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-  .edu-degree { font-size: 14px; font-weight: 500; color: #c9d1d9; }
-  .edu-school { font-size: 12.5px; color: #8b949e; margin-top: 4px; }
-  .edu-year { font-size: 12px; color: #5DCAA5; white-space: nowrap; }
-
-  /* ── FOOTER ── */
-  .footer { text-align: center; padding: 28px 0 0; }
-  .footer-title { font-size: 14px; font-weight: 500; color: #c9d1d9; margin-bottom: 8px; }
-  .footer-quote { font-size: 13px; color: #8b949e; font-style: italic; margin-bottom: 6px; }
-  .footer-star { font-size: 12px; color: #8b949e; }
-
-  @media (max-width: 600px) {
-    .banner-name { font-size: 34px; }
-    .expertise-grid, .projects-grid { grid-template-columns: 1fr; }
-    .stats-row img { height: auto; width: 100%; }
-    .banner-content { padding: 0 28px; }
-    .accent-bar { left: 16px; }
-  }
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════ ANIMATED BANNER ═══════════════════ -->
-<div class="banner">
-  <canvas id="bannerCanvas"></canvas>
-  <div class="accent-bar"></div>
-  <div class="banner-content">
-    <div class="banner-tag">&lt; Software Engineer /&gt;</div>
-    <div class="banner-name">Sanjay Kumar</div>
-    <div class="banner-role">Backend · Cloud · AI Automation · Solution Architecture</div>
-    <div class="banner-pills">
-      <span class="pill p-purple">Elixir · Phoenix</span>
-      <span class="pill p-teal">AWS · Docker · K8s</span>
-      <span class="pill p-blue">Python · LLM</span>
-      <span class="pill p-amber">MQTT · IoT</span>
-      <span class="pill p-coral">Microservices</span>
-    </div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">~/sanjay</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-  <div class="banner-location">Greater Noida, India</div>
-</div>
+</nav>
 
-<!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
-<div class="container">
-
-  <!-- Meta bar -->
-  <div class="meta-bar">
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap">
     <div>
-      <div class="badges">
-        <img class="badge-img" src="https://komarev.com/ghpvc/?username=zeus881&color=6366f1&style=flat-square&label=PROFILE+VIEWS"/>
-        <img class="badge-img" src="https://img.shields.io/github/followers/zeus881?style=flat-square&color=6366f1&label=FOLLOWERS"/>
+      <p class="hello">&gt; hello, world</p>
+      <h1 class="name">Sanjay Kumar</h1>
+      <p class="role">Software Engineer</p>
+      <p class="tagline">I build systems that run in the real world: live IoT fleets, secure cloud platforms, defence-grade algorithms and AI tools that help teams decide faster.</p>
+      <div class="pills">
+        <span class="pill t">● Rebhu Computing</span>
+        <span class="pill v">Ministry of Defence projects</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="mailto:sanjaykumarr99009@gmail.com">Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/sanjay-kumar-7689531b5/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn ghost" href="https://github.com/zeus881" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/sanjay-kumar-7689531b5/" target="_blank">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/linkedin/linkedin-original.svg" title="LinkedIn"/>
-      </a>
-      <a href="https://sanjaykumar-potfolio.netlify.app" target="_blank">
-        <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/chrome/chrome-original.svg" title="Portfolio"/>
-      </a>
-      <a href="mailto:sanjaykumarr99009@gmail.com">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" title="Email"/>
-      </a>
-    </div>
+    <figure class="stage">
+      <canvas id="sphere" aria-label="Interactive 3D network: an MQTT broker sending updates to edge devices. Drag to rotate."></canvas>
+      <figcaption>mqtt broker → 100+ edge devices · drag to rotate</figcaption>
+    </figure>
   </div>
+</header>
 
-  <hr/>
-
-  <!-- About -->
-  <h2>👨‍💻 About Me</h2>
-  <div class="about-box">
-    Software Engineer with hands-on experience building <strong>scalable backend systems</strong>, <strong>real-time IoT platforms</strong>, and <strong>AI-powered automation solutions</strong>. Currently at <strong>Rebhu Computing Pvt. Ltd.</strong>, developing retail automation with Elixir/Phoenix, MQTT, Docker, and local LLMs.<br><br>
-    Previously at <strong>Yottec System LLP</strong>, I led defence software projects in collaboration with the <strong>Ministry of Defence</strong>, building real-time algorithms and Python/AWS automation tools.
-    <div class="about-quote">💡 I don't just write code — I architect solutions that scale.</div>
-  </div>
-
-  <hr/>
-
-  <!-- Experience -->
-  <h2>💼 Experience</h2>
-
-  <div class="exp-card">
-    <div class="exp-header">
-      <div>
-        <div class="exp-company">Rebhu Computing Pvt. Ltd.</div>
-        <div class="exp-role">Software Engineer</div>
+<!-- ================= TERMINAL ================= -->
+<section aria-label="Terminal introduction">
+  <div class="wrap">
+    <div class="term reveal">
+      <div class="term-bar">
+        <span class="dot" style="background:#FF5F57"></span>
+        <span class="dot" style="background:#FEBC2E"></span>
+        <span class="dot" style="background:#28C840"></span>
+        <span class="title">sanjay@zeus881: ~</span>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
-        <span class="current-tag">Current</span>
-        <span class="exp-date">Feb 2026 – Present</span>
-      </div>
-    </div>
-    <div class="exp-bullet">Built real-time retail automation using Elixir/Phoenix — live price & barcode sync across 100+ ESL devices via MQTT</div>
-    <div class="exp-bullet">Developed secure containerized apps with Docker, Podman, and Keycloak (OAuth2/RBAC)</div>
-    <div class="exp-bullet">Engineered AI-powered client targeting & ranking using Python, Ollama LLM, and Streamlit</div>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-header">
-      <div>
-        <div class="exp-company">Yottec System LLP</div>
-        <div class="exp-role">Junior Engineer – Project Coordinator</div>
-      </div>
-      <span class="exp-date">Jan 2025 – Feb 2026</span>
-    </div>
-    <div class="exp-bullet">Led defence software projects in collaboration with Ministry of Defence</div>
-    <div class="exp-bullet">Designed real-time algorithms and developed Python/AWS automation tools</div>
-    <div class="exp-bullet">Coordinated Agile/Scrum ceremonies and implementation planning</div>
-  </div>
-
-  <hr/>
-
-  <!-- Tech Stack -->
-  <h2>🚀 Tech Stack</h2>
-
-  <div class="stack-group">
-    <div class="stack-label">Languages</div>
-    <div class="stack-icons">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/python/python-original.svg" title="Python"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/elixir/elixir-original.svg" title="Elixir"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/javascript/javascript-original.svg" title="JavaScript"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/typescript/typescript-original.svg" title="TypeScript"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/html5/html5-original.svg" title="HTML5"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/css3/css3-original.svg" title="CSS3"/>
+      <div id="term" aria-live="off"></div>
     </div>
   </div>
+</section>
 
-  <div class="stack-group">
-    <div class="stack-label">Frameworks & Libraries</div>
-    <div class="stack-icons">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/phoenix/phoenix-original.svg" title="Phoenix"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/react/react-original.svg" title="React"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/nodejs/nodejs-original.svg" title="Node.js"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/django/django-plain.svg" title="Django"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/tailwindcss/tailwindcss-original.svg" title="Tailwind CSS"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/pandas/pandas-original.svg" title="Pandas"/>
-    </div>
-  </div>
-
-  <div class="stack-group">
-    <div class="stack-label">Cloud & DevOps</div>
-    <div class="stack-icons">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" title="AWS"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/docker/docker-original.svg" title="Docker"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/kubernetes/kubernetes-original.svg" title="Kubernetes"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/podman/podman-original.svg" title="Podman"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/github/github-original.svg" title="GitHub Actions"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/linux/linux-original.svg" title="Linux"/>
-    </div>
-  </div>
-
-  <div class="stack-group">
-    <div class="stack-label">Databases</div>
-    <div class="stack-icons">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/mongodb/mongodb-original.svg" title="MongoDB"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/postgresql/postgresql-original.svg" title="PostgreSQL"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/mysql/mysql-original.svg" title="MySQL"/>
-    </div>
-  </div>
-
-  <div class="stack-group">
-    <div class="stack-label">AI & Data Science</div>
-    <div class="stack-icons">
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/scikitlearn/scikitlearn-original.svg" title="Scikit-learn"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/numpy/numpy-original.svg" title="NumPy"/>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/v2.16.0/icons/jupyter/jupyter-original.svg" title="Jupyter"/>
-    </div>
-  </div>
-
-  <hr/>
-
-  <!-- Core Expertise -->
-  <h2>🧠 Core Expertise</h2>
-  <div class="expertise-grid">
-    <div class="expertise-item"><div class="label">🏗️ Solution Architecture</div><div class="tags">Microservices · Event-Driven · Distributed Systems</div></div>
-    <div class="expertise-item"><div class="label">⚙️ Backend Engineering</div><div class="tags">REST APIs · Real-time IoT · System Integration</div></div>
-    <div class="expertise-item"><div class="label">☁️ Cloud Infrastructure</div><div class="tags">EC2 · Lambda · S3 · DynamoDB · API Gateway · IAM</div></div>
-    <div class="expertise-item"><div class="label">🤖 AI & Automation</div><div class="tags">Local LLMs · NLP · Hybrid Web Crawling</div></div>
-    <div class="expertise-item"><div class="label">🔒 Security</div><div class="tags">OAuth2 · RBAC · Keycloak · Containerized Auth</div></div>
-    <div class="expertise-item"><div class="label">📋 Delivery & Process</div><div class="tags">Agile/Scrum · Technical Documentation · DSA</div></div>
-  </div>
-
-  <hr/>
-
-  <!-- Projects -->
-  <h2>🚧 Projects</h2>
-  <div class="projects-grid">
-    <div class="proj-card">
-      <div class="proj-name">Cubboard4u.com</div>
-      <div class="proj-desc">Interactive e-commerce platform with sleek UI & seamless user experience</div>
-      <div class="proj-stack">
-        <span class="proj-tag">React</span><span class="proj-tag">Node.js</span><span class="proj-tag">MongoDB</span><span class="proj-tag">Tailwind</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-name">AI Art Generator</div>
-      <div class="proj-desc">Cloud-based AI-powered digital art creator with NFT integration</div>
-      <div class="proj-stack">
-        <span class="proj-tag">Python</span><span class="proj-tag">AWS</span><span class="proj-tag">AI APIs</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-name">Retail ESL Automation</div>
-      <div class="proj-desc">Real-time price & barcode sync across 100+ IoT ESL devices</div>
-      <div class="proj-stack">
-        <span class="proj-tag">Elixir</span><span class="proj-tag">Phoenix</span><span class="proj-tag">MQTT</span><span class="proj-tag">Docker</span>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-name">AI Client Targeting</div>
-      <div class="proj-desc">LLM-powered client ranking & targeting solution for business teams</div>
-      <div class="proj-stack">
-        <span class="proj-tag">Python</span><span class="proj-tag">Ollama</span><span class="proj-tag">Streamlit</span>
-      </div>
-    </div>
-  </div>
-
-  <hr/>
-
-  <!-- GitHub Stats -->
-  <h2>📊 GitHub Stats</h2>
-  <div class="stats-row">
-    <img src="https://github-readme-stats.vercel.app/api?username=zeus881&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeus881&layout=compact&theme=tokyonight&hide_border=true"/>
-  </div>
-  <br/>
-  <div style="text-align:center;">
-    <img src="https://streak-stats.demolab.com?user=zeus881&theme=tokyonight&hide_border=true" style="border-radius:8px;"/>
-  </div>
-
-  <hr/>
-
-  <!-- Certifications -->
-  <h2>🏅 Certifications</h2>
-  <div class="cert-list">
-    <div class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">Full Stack Web Development</div><div class="cert-org">Internshala</div></div></div>
-    <div class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">Python Programming</div><div class="cert-org">Mapping Skills Institute</div></div></div>
-    <div class="cert-item"><div class="cert-icon">🏅</div><div><div class="cert-name">AWS Cloud Computing</div><div class="cert-org">IIIT Institute</div></div></div>
-  </div>
-
-  <hr/>
-
-  <!-- Education -->
-  <h2>🎓 Education</h2>
-  <div class="edu-card">
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about reveal">
     <div>
-      <div class="edu-degree">B.Tech — Computer Science & Engineering</div>
-      <div class="edu-school">Shambhunath Institute of Engineering and Technology, Prayagraj</div>
+      <h2>About me</h2>
+      <p class="lead">I don't just write code. I design solutions that scale, stay secure and keep running when it matters.</p>
+      <p style="margin-top:16px;max-width:60ch">Today I build real-time retail automation at Rebhu Computing with Elixir/Phoenix, MQTT, Docker and local LLMs. Before that I led defence software projects with the Ministry of Defence at Yottec System, designing real-time algorithms and Python/AWS automation.</p>
     </div>
-    <div class="edu-year">2021 – 2024</div>
+    <ul class="facts">
+      <li><b>Now</b><span>Real-time IoT and retail automation at Rebhu</span></li>
+      <li><b>I care about</b><span>Clean architecture, fault tolerance, security by default</span></li>
+      <li><b>Exploring</b><span>Distributed Elixir/OTP, event-driven design, local LLMs in production</span></li>
+      <li><b>Open to</b><span>Backend, platform and IoT engineering roles and collaborations</span></li>
+    </ul>
   </div>
+</section>
 
-  <hr/>
-
-  <!-- Footer -->
-  <div class="footer">
-    <div class="footer-title">🤝 Open to Collaborations · Backend Systems · AI Solutions · Cloud Architecture</div>
-    <div class="footer-quote">"Building systems that don't just work — they scale, secure, and last."</div>
-    <div class="footer-star">⭐ If you find my work useful, consider starring my repos!</div>
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <h2 class="reveal">Experience</h2>
+    <div class="timeline">
+      <article class="job reveal">
+        <header><h3>Rebhu Computing Pvt. Ltd.</h3><span class="when">Feb 2026 – Present</span></header>
+        <p class="title">Software Engineer</p>
+        <ul>
+          <li>Architected <strong>real-time price and barcode sync for 100+ Electronic Shelf Labels</strong> over MQTT with Elixir/Phoenix, removing manual shelf updates.</li>
+          <li>Shipped <strong>secure containerised services</strong> on Docker and Podman behind <strong>Keycloak OAuth2 + RBAC</strong>.</li>
+          <li>Built an <strong>AI client targeting and ranking engine</strong> with Python, Ollama and Streamlit that keeps data on-prem.</li>
+        </ul>
+      </article>
+      <article class="job reveal">
+        <header><h3>Yottec System LLP</h3><span class="when">Jan 2025 – Feb 2026</span></header>
+        <p class="title">Junior Engineer – Project Coordinator</p>
+        <ul>
+          <li>Led <strong>defence software projects with the Ministry of Defence</strong>.</li>
+          <li>Designed <strong>real-time algorithms</strong> for mission-critical workflows.</li>
+          <li>Built <strong>Python + AWS automation tools</strong> to cut repetitive manual work.</li>
+          <li>Ran Agile/Scrum ceremonies and implementation planning.</li>
+        </ul>
+        <p class="note">Defence work details are confidential.</p>
+      </article>
+    </div>
   </div>
+</section>
 
-</div>
+<!-- ================= PIPELINE ================= -->
+<section aria-labelledby="pipe-h">
+  <div class="wrap">
+    <h2 id="pipe-h" class="reveal">How I build: the real-time ESL pipeline</h2>
+    <div class="pipe reveal">
+      <svg viewBox="0 0 900 260" role="img" aria-label="Retail backend sends updates to a Phoenix app, which publishes to an MQTT broker that fans out to 100+ shelf-label devices. Keycloak and PostgreSQL support the app inside Docker/Podman.">
+        <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3FE0B5"/></marker></defs>
+        <g font-family="Sora,system-ui,sans-serif" font-size="13" fill="#E6E4FA" text-anchor="middle">
+          <rect x="190" y="30" width="330" height="210" rx="14" fill="none" stroke="#8B83F0" stroke-opacity=".4" stroke-dasharray="5 5"/>
+          <text x="355" y="232" font-size="11" fill="#A9B4D0">Docker / Podman</text>
 
-<!-- ═══════════════════ PARTICLE ANIMATION ═══════════════════ -->
+          <rect x="10" y="90" width="140" height="56" rx="10" fill="#141D3E" stroke="#58A6FF"/>
+          <text x="80" y="114">Retail backend</text><text x="80" y="132" font-size="11" fill="#A9B4D0">POS updates</text>
+
+          <rect x="220" y="90" width="140" height="56" rx="10" fill="#141D3E" stroke="#8B83F0"/>
+          <text x="290" y="114">Phoenix app</text><text x="290" y="132" font-size="11" fill="#A9B4D0">Elixir / OTP</text>
+
+          <rect x="390" y="50" width="110" height="46" rx="10" fill="#141D3E" stroke="#8B83F0" stroke-opacity=".7"/>
+          <text x="445" y="72">Keycloak</text><text x="445" y="88" font-size="10" fill="#A9B4D0">OAuth2 + RBAC</text>
+          <rect x="390" y="150" width="110" height="46" rx="10" fill="#141D3E" stroke="#8B83F0" stroke-opacity=".7"/>
+          <text x="445" y="178">PostgreSQL</text>
+
+          <rect x="570" y="90" width="120" height="56" rx="28" fill="rgba(63,224,181,.12)" stroke="#3FE0B5"/>
+          <text x="630" y="114" fill="#3FE0B5" font-weight="600">MQTT</text><text x="630" y="132" font-size="11" fill="#A9B4D0">broker</text>
+
+          <g fill="#141D3E" stroke="#3FE0B5" stroke-opacity=".7">
+            <rect x="760" y="30" width="120" height="40" rx="8"/><rect x="760" y="98" width="120" height="40" rx="8"/><rect x="760" y="166" width="120" height="40" rx="8"/>
+          </g>
+          <text x="820" y="55">ESL device 1</text><text x="820" y="123">ESL device 2</text><text x="820" y="191">100+ devices</text>
+
+          <g stroke="#3FE0B5" stroke-width="2" fill="none" marker-end="url(#ar)">
+            <path class="flow" d="M150 118H218"/>
+            <path class="flow" d="M360 118H568"/>
+            <path class="flow" d="M690 118C725 118 725 50 758 50"/>
+            <path class="flow" d="M690 118H758"/>
+            <path class="flow" d="M690 118C725 118 725 186 758 186"/>
+          </g>
+          <g stroke="#8B83F0" stroke-opacity=".6" stroke-width="1.5" fill="none">
+            <path d="M330 90C340 73 365 73 388 73"/><path d="M330 146C340 173 365 173 388 173"/>
+          </g>
+          <text x="459" y="110" font-size="11" fill="#A9B4D0">publish</text>
+          <text x="725" y="110" font-size="11" fill="#A9B4D0">subscribe</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="wrap">
+    <h2 class="reveal">Featured projects</h2>
+    <div class="projects">
+      <article class="proj big reveal">
+        <h3>Retail ESL automation</h3>
+        <p>Real-time price and barcode sync across 100+ IoT shelf labels, built on Elixir's fault-tolerant OTP so one failing device never stalls the rest.</p>
+        <div class="tags"><span class="tag">Elixir</span><span class="tag">Phoenix</span><span class="tag">MQTT</span><span class="tag">Docker</span></div>
+      </article>
+      <article class="proj reveal">
+        <h3>AI client targeting</h3>
+        <p>LLM-powered client ranking that runs fully local with Ollama, so private data never leaves the network.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Ollama</span><span class="tag">Streamlit</span></div>
+      </article>
+      <article class="proj reveal">
+        <h3><a href="https://cubboard4u.com" target="_blank" rel="noopener">Cubboard4u.com ↗</a></h3>
+        <p>Interactive e-commerce platform with a clean UI and smooth shopping flow.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Tailwind</span></div>
+      </article>
+      <article class="proj reveal" style="grid-column:1/-1">
+        <h3>AI art generator</h3>
+        <p>Cloud-based AI art creator with NFT integration.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">AWS</span><span class="tag">AI APIs</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section id="stack">
+  <div class="wrap">
+    <h2 class="reveal">Tech stack</h2>
+    <div class="stack reveal">
+      <div><h3>Languages</h3><div class="tags"><span class="tag hi">Python</span><span class="tag hi">Elixir</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">HTML</span><span class="tag">CSS</span></div></div>
+      <div><h3>Frameworks</h3><div class="tags"><span class="tag hi">Phoenix</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Django</span><span class="tag">Tailwind</span><span class="tag">Pandas</span><span class="tag">Streamlit</span></div></div>
+      <div><h3>Cloud &amp; DevOps</h3><div class="tags"><span class="tag hi">AWS</span><span class="tag hi">Docker</span><span class="tag">Podman</span><span class="tag">Kubernetes</span><span class="tag">Linux</span><span class="tag hi">MQTT</span></div></div>
+      <div><h3>Security</h3><div class="tags"><span class="tag hi">Keycloak</span><span class="tag">OAuth2</span><span class="tag">RBAC</span></div></div>
+      <div><h3>Databases</h3><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">DynamoDB</span></div></div>
+      <div><h3>AI &amp; data</h3><div class="tags"><span class="tag hi">Ollama</span><span class="tag">Local LLMs</span><span class="tag">NLP</span><span class="tag">scikit-learn</span><span class="tag">NumPy</span><span class="tag">Jupyter</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section>
+  <div class="wrap edu reveal">
+    <div>
+      <h2>Education</h2>
+      <h3>B.Tech, Computer Science &amp; Engineering</h3>
+      <p>Shambhunath Institute of Engineering and Technology, Prayagraj<br>2021 – 2024</p>
+    </div>
+    <div>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Full Stack Web Development <span>· Internshala</span></li>
+        <li>Python Programming <span>· Mapping Skills Institute</span></li>
+        <li>AWS Cloud Computing <span>· IIIT Institute</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <h2>Let's build something that scales.</h2>
+    <p>Have a backend, IoT or cloud problem? I'd like to hear about it.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:sanjaykumarr99009@gmail.com">sanjaykumarr99009@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/sanjay-kumar-7689531b5/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://sanjaykumar-potfolio.netlify.app" target="_blank" rel="noopener">Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<footer>"Building systems that don't just work — they scale, secure, and last." · © <span id="yr"></span> Sanjay Kumar</footer>
+
 <script>
-  const canvas = document.getElementById('bannerCanvas');
-  const ctx = canvas.getContext('2d');
-  const banner = canvas.parentElement;
+document.getElementById('yr').textContent = new Date().getFullYear();
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function resize() {
-    canvas.width = banner.offsetWidth;
-    canvas.height = banner.offsetHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
+/* =========================================================
+   1. Interactive 3D geodesic sphere (vanilla canvas, no libs)
+   ========================================================= */
+(() => {
+  const cv = document.getElementById('sphere'), ctx = cv.getContext('2d');
+  // --- geometry: icosahedron subdivided once -> 42 nodes, 120 edges
+  const t = (1 + Math.sqrt(5)) / 2;
+  let V = [[-1,t,0],[1,t,0],[-1,-t,0],[1,-t,0],[0,-1,t],[0,1,t],[0,-1,-t],[0,1,-t],[t,0,-1],[t,0,1],[-t,0,-1],[-t,0,1]];
+  const F = [[0,11,5],[0,5,1],[0,1,7],[0,7,10],[0,10,11],[1,5,9],[5,11,4],[11,10,2],[10,7,6],[7,1,8],
+             [3,9,4],[3,4,2],[3,2,6],[3,6,8],[3,8,9],[4,9,5],[2,4,11],[6,2,10],[8,6,7],[9,8,1]];
+  const norm = p => { const l = Math.hypot(...p); return p.map(c => c / l); };
+  V = V.map(norm);
+  const cache = {};
+  const mid = (a, b) => {
+    const k = a < b ? a + '_' + b : b + '_' + a;
+    if (cache[k] === undefined) { V.push(norm(V[a].map((c, i) => (c + V[b][i]) / 2))); cache[k] = V.length - 1; }
+    return cache[k];
+  };
+  const edges = new Set();
+  F.forEach(([a, b, c]) => {
+    const ab = mid(a, b), bc = mid(b, c), ca = mid(c, a);
+    [[a,ab,ca],[b,bc,ab],[c,ca,bc],[ab,bc,ca]].forEach(f =>
+      f.forEach((v, i) => { const w = f[(i + 1) % 3]; edges.add(v < w ? v + ',' + w : w + ',' + v); }));
+  });
+  const E = [...edges].map(s => s.split(',').map(Number));
+  const flash = new Float32Array(V.length);   // node glow level
+  const packets = [];                          // broker -> node messages
 
-  const COLORS = ['#7F77DD','#1D9E75','#185FA5','#5DCAA5','#AFA9EC'];
+  let W, H, R, dpr;
+  const resize = () => {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    const r = cv.getBoundingClientRect();
+    W = r.width; H = r.height; R = Math.min(W, H) * 0.34;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  addEventListener('resize', resize); resize();
 
-  function hexToRgb(hex) {
-    return `${parseInt(hex.slice(1,3),16)},${parseInt(hex.slice(3,5),16)},${parseInt(hex.slice(5,7),16)}`;
-  }
+  // --- interaction: drag to spin, gentle mouse parallax
+  let rotY = 0, rotX = -0.38, velY = 0.0035, velX = 0, dragging = false, lx = 0, ly = 0;
+  cv.addEventListener('pointerdown', e => { dragging = true; lx = e.clientX; ly = e.clientY; cv.setPointerCapture(e.pointerId); });
+  cv.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    velY = (e.clientX - lx) * 0.0006; velX = (e.clientY - ly) * 0.0006;
+    rotY += (e.clientX - lx) * 0.008; rotX += (e.clientY - ly) * 0.008;
+    rotX = Math.max(-1.2, Math.min(1.2, rotX)); lx = e.clientX; ly = e.clientY;
+  });
+  cv.addEventListener('pointerup', () => dragging = false);
 
-  const dots = Array.from({length: 85}, () => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    vx: (Math.random() - 0.5) * 0.38,
-    vy: (Math.random() - 0.5) * 0.38,
-    r: Math.random() * 1.6 + 0.5,
-    color: COLORS[Math.floor(Math.random() * COLORS.length)],
-    opacity: Math.random() * 0.5 + 0.2
-  }));
+  const project = ([x, y, z]) => {
+    let cy = Math.cos(rotY), sy = Math.sin(rotY);
+    [x, z] = [x * cy + z * sy, -x * sy + z * cy];
+    let cx = Math.cos(rotX), sx = Math.sin(rotX);
+    [y, z] = [y * cx - z * sx, y * sx + z * cx];
+    const s = 1 / (1 - 0.3 * z);
+    return [W / 2 + x * R * s, H / 2 + y * R * s, z, s];
+  };
 
-  function draw() {
-    const W = canvas.width, H = canvas.height;
+  let last = 0, wave = 0;
+  const frame = now => {
+    const dt = Math.min(50, now - last || 16); last = now;
+    if (!dragging) { rotY += velY * dt / 16; velY += (0.0035 - velY) * 0.02; velX *= 0.95; rotX += velX; }
     ctx.clearRect(0, 0, W, H);
-    ctx.fillStyle = '#060B14';
-    ctx.fillRect(0, 0, W, H);
+    const P = V.map(project);
 
-    const g1 = ctx.createRadialGradient(W * 0.78, H * 0.2, 0, W * 0.78, H * 0.2, 240);
-    g1.addColorStop(0, 'rgba(127,119,221,0.09)'); g1.addColorStop(1, 'transparent');
-    ctx.fillStyle = g1; ctx.fillRect(0, 0, W, H);
+    // halo
+    const g = ctx.createRadialGradient(W/2, H/2, R * 0.2, W/2, H/2, R * 1.6);
+    g.addColorStop(0, 'rgba(127,119,221,.16)'); g.addColorStop(1, 'rgba(127,119,221,0)');
+    ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
 
-    const g2 = ctx.createRadialGradient(W * 0.12, H, 0, W * 0.12, H, 200);
-    g2.addColorStop(0, 'rgba(29,158,117,0.08)'); g2.addColorStop(1, 'transparent');
-    ctx.fillStyle = g2; ctx.fillRect(0, 0, W, H);
-
-    for (let i = 0; i < dots.length; i++) {
-      for (let j = i + 1; j < dots.length; j++) {
-        const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if (dist < 115) {
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(${hexToRgb(dots[i].color)},${(1 - dist/115) * 0.18})`;
-          ctx.lineWidth = 0.6;
-          ctx.moveTo(dots[i].x, dots[i].y);
-          ctx.lineTo(dots[j].x, dots[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    dots.forEach(d => {
-      ctx.beginPath();
-      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${hexToRgb(d.color)},${d.opacity})`;
-      ctx.fill();
-      d.x += d.vx; d.y += d.vy;
-      if (d.x < 0 || d.x > W) d.vx *= -1;
-      if (d.y < 0 || d.y > H) d.vy *= -1;
+    // shockwaves from broker
+    wave = (wave + dt / 3000) % 1;
+    [wave, (wave + .5) % 1].forEach(w => {
+      ctx.beginPath(); ctx.arc(W/2, H/2, 6 + w * R * 1.15, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(63,224,181,${0.7 * (1 - w)})`; ctx.lineWidth = 1.4; ctx.stroke();
     });
 
-    requestAnimationFrame(draw);
-  }
+    // edges (back first)
+    E.map(([a, b]) => [a, b, (P[a][2] + P[b][2]) / 2]).sort((p, q) => p[2] - q[2]).forEach(([a, b, z]) => {
+      ctx.beginPath(); ctx.moveTo(P[a][0], P[a][1]); ctx.lineTo(P[b][0], P[b][1]);
+      ctx.strokeStyle = `rgba(139,131,240,${0.1 + 0.5 * (z + 1) / 2})`; ctx.lineWidth = 1; ctx.stroke();
+    });
 
-  draw();
+    // broker core
+    const pulse = 1 + 0.15 * Math.sin(now / 480);
+    const cg = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, R * 0.28 * pulse);
+    cg.addColorStop(0, 'rgba(63,224,181,.95)'); cg.addColorStop(.35, 'rgba(63,224,181,.25)'); cg.addColorStop(1, 'rgba(63,224,181,0)');
+    ctx.fillStyle = cg; ctx.beginPath(); ctx.arc(W/2, H/2, R * 0.28 * pulse, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#E9FFF8'; ctx.beginPath(); ctx.arc(W/2, H/2, 4.5, 0, Math.PI * 2); ctx.fill();
+
+    // spawn + draw MQTT packets travelling broker -> device
+    if (Math.random() < dt / 260 && packets.length < 10) packets.push({ to: (Math.random() * V.length) | 0, t: 0 });
+    for (let i = packets.length - 1; i >= 0; i--) {
+      const p = packets[i]; p.t += dt / 900;
+      if (p.t >= 1) { flash[p.to] = 1; packets.splice(i, 1); continue; }
+      const [vx, vy, vz] = V[p.to];
+      const [px, py, pz] = project([vx * p.t, vy * p.t, vz * p.t]);
+      ctx.fillStyle = `rgba(63,224,181,${0.5 + 0.5 * (pz + 1) / 2})`;
+      ctx.beginPath(); ctx.arc(px, py, 2.4, 0, Math.PI * 2); ctx.fill();
+    }
+
+    // nodes (back to front)
+    P.map((p, i) => [p, i]).sort((a, b) => a[0][2] - b[0][2]).forEach(([[x, y, z, s], i]) => {
+      const depth = (z + 1) / 2, f = flash[i];
+      if (f > 0) {
+        ctx.fillStyle = `rgba(63,224,181,${0.35 * f})`;
+        ctx.beginPath(); ctx.arc(x, y, (5 + 10 * (1 - f)) * s, 0, Math.PI * 2); ctx.fill();
+        flash[i] = Math.max(0, f - dt / 900);
+      }
+      ctx.fillStyle = f > 0.05 ? `rgba(63,224,181,${0.5 + 0.5 * depth})` : `rgba(185,179,255,${0.25 + 0.75 * depth})`;
+      ctx.beginPath(); ctx.arc(x, y, (1.6 + 2 * depth) * s, 0, Math.PI * 2); ctx.fill();
+    });
+
+    if (!reduceMotion) requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
+})();
+
+/* =========================================================
+   2. Typing terminal
+   ========================================================= */
+(() => {
+  const el = document.getElementById('term');
+  const script = [
+    ['$ ', 'whoami'],
+    [null, 'Sanjay Kumar, Software Engineer @ Rebhu Computing', '#E6E4FA'],
+    ['$ ', 'cat focus.txt'],
+    [null, 'distributed backends | real-time IoT | secure cloud | local LLMs', '#A9B4D0'],
+    ['$ ', 'mqtt pub retail/esl/+/price --qos 1'],
+    [null, '✓ price + barcode synced to 100+ shelf labels', '#3FE0B5'],
+    ['$ ', 'git log --author=me --grep=defence --oneline'],
+    [null, 'a1f3c9e  real-time algorithms for Ministry of Defence projects', '#B9B3FF'],
+    ['$ ', 'echo $MOTTO'],
+    [null, 'Systems that scale, secure, and last.', '#58A6FF'],
+  ];
+  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const caret = '<span class="caret"></span>';
+
+  if (reduceMotion) {
+    el.innerHTML = script.map(([p, t, c]) => p ? `<span class="p">${p}</span>${esc(t)}` : `<span style="color:${c}">${esc(t)}</span>`).join('\n') + `\n<span class="p">$ </span>${caret}`;
+    return;
+  }
+  let started = false;
+  const run = async () => {
+    while (true) {
+      let html = '';
+      for (const [p, t, c] of script) {
+        if (p) {
+          for (let i = 1; i <= t.length; i++) {
+            el.innerHTML = html + `<span class="p">${p}</span>${esc(t.slice(0, i))}${caret}`;
+            await sleep(38 + Math.random() * 40);
+          }
+          html += `<span class="p">${p}</span>${esc(t)}\n`;
+          await sleep(320);
+        } else {
+          html += `<span style="color:${c}">${esc(t)}</span>\n`;
+          el.innerHTML = html + caret;
+          await sleep(550);
+        }
+      }
+      el.innerHTML = html + `<span class="p">$ </span>${caret}`;
+      await sleep(5000);
+    }
+  };
+  // start typing when the terminal scrolls into view
+  new IntersectionObserver((ents, obs) => {
+    if (ents[0].isIntersecting && !started) { started = true; run(); obs.disconnect(); }
+  }, { threshold: .3 }).observe(el);
+})();
+
+/* =========================================================
+   3. Reveal sections on scroll
+   ========================================================= */
+(() => {
+  const io = new IntersectionObserver(ents => ents.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+})();
 </script>
 </body>
 </html>
