@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="1000" height="250" role="img" aria-label="Let's build something that scales.">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E1530"/><stop offset="1" stop-color="#071F26"/></linearGradient>
+ <linearGradient id="tl" gradientUnits="userSpaceOnUse" x1="0" y1="96" x2="0" y2="398"><stop offset="0" stop-color="#3FE0B5"/><stop offset="1" stop-color="#8B83F0"/></linearGradient>
+ <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<style>
+ .t{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif} .m{font-family:'JetBrains Mono','Fira Code',Consolas,monospace}
+ .h{font-size:26px;font-weight:800;fill:#E6E4FA}
+ .fade{opacity:0;animation:fade .8s ease forwards}
+ @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+ 
+ @media (prefers-reduced-motion:reduce){*{animation:none!important}.fade{opacity:1}}
+</style>
+<rect x=".5" y=".5" width="999" height="249" rx="16" fill="url(#bg)" stroke="#8B83F0" stroke-opacity=".25"/>
+<rect x="1" y="1" width="998" height="248" rx="16" fill="url(#grid)"/>
+<defs><linearGradient id="cg" x1="0" x2="1"><stop offset="0" stop-color="#B9B3FF"/><stop offset=".5" stop-color="#3FE0B5"/><stop offset="1" stop-color="#58A6FF"/>
+ <animateTransform attributeName="gradientTransform" type="translate" values="-0.4 0;0.4 0;-0.4 0" dur="8s" repeatCount="indefinite"/></linearGradient></defs>
+<path fill="#3FE0B5" fill-opacity=".07"><animate attributeName="d" dur="8s" repeatCount="indefinite" values="M0 190 Q250 150 500 190 T1000 190 V250 H0Z;M0 190 Q250 230 500 190 T1000 190 V250 H0Z;M0 190 Q250 150 500 190 T1000 190 V250 H0Z"/></path>
+<path fill="#8B83F0" fill-opacity=".08"><animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0 205 Q250 235 500 205 T1000 205 V250 H0Z;M0 205 Q250 175 500 205 T1000 205 V250 H0Z;M0 205 Q250 235 500 205 T1000 205 V250 H0Z"/></path>
+<text x="500" y="100" text-anchor="middle" class="t" font-size="40" font-weight="800" fill="url(#cg)">Let's build something that scales.</text>
+<text x="500" y="142" text-anchor="middle" class="t" font-size="16" fill="#A9B4D0">Have a backend, IoT or cloud problem? I'd like to hear about it.</text>
+</svg>

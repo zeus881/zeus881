@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 440" width="1000" height="440" role="img" aria-label="Experience: Software Engineer at Rebhu Computing (Feb 2026–present); Junior Engineer – Project Coordinator at Yottec System (Jan 2025–Feb 2026), Ministry of Defence projects.">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E1530"/><stop offset="1" stop-color="#071F26"/></linearGradient>
+ <linearGradient id="tl" gradientUnits="userSpaceOnUse" x1="0" y1="96" x2="0" y2="398"><stop offset="0" stop-color="#3FE0B5"/><stop offset="1" stop-color="#8B83F0"/></linearGradient>
+ <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<style>
+ .t{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif} .m{font-family:'JetBrains Mono','Fira Code',Consolas,monospace}
+ .h{font-size:26px;font-weight:800;fill:#E6E4FA}
+ .fade{opacity:0;animation:fade .8s ease forwards}
+ @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+ @keyframes draw{to{stroke-dashoffset:0}}
+ @media (prefers-reduced-motion:reduce){*{animation:none!important}.fade{opacity:1}}
+</style>
+<rect x=".5" y=".5" width="999" height="439" rx="16" fill="url(#bg)" stroke="#8B83F0" stroke-opacity=".25"/>
+<rect x="1" y="1" width="998" height="438" rx="16" fill="url(#grid)"/>
+<text x="40" y="54" class="t h">Experience &amp; impact</text>
+<path d="M58 96V398" stroke="url(#tl)" stroke-width="2.5" stroke-dasharray="310" stroke-dashoffset="310" style="animation:draw 1.6s ease forwards"/>
+<g class="fade" style="animation-delay:0.3s"><circle cx="58" cy="100" r="8" fill="#0E1530" stroke="#3FE0B5" stroke-width="3"><animate attributeName="r" values="8;11;8" dur="2.4s" repeatCount="indefinite"/></circle><text x="88" y="106" class="t" font-size="20" font-weight="700" fill="#E6E4FA">Rebhu Computing Pvt. Ltd.</text><text x="960" y="106" text-anchor="end" class="m" font-size="13" fill="#A9B4D0">Feb 2026 – Present</text><text x="88" y="130" class="t" font-size="15" font-weight="600" fill="#3FE0B5">Software Engineer</text><text x="88" y="158" class="t" font-size="14.5" fill="#A9B4D0"><tspan fill="#3FE0B5">▹ </tspan>Real-time price &amp; barcode sync for 100+ shelf labels over MQTT (Elixir/Phoenix)</text><text x="88" y="184" class="t" font-size="14.5" fill="#A9B4D0"><tspan fill="#3FE0B5">▹ </tspan>Secure containerised services on Docker &amp; Podman behind Keycloak OAuth2 + RBAC</text><text x="88" y="210" class="t" font-size="14.5" fill="#A9B4D0"><tspan fill="#3FE0B5">▹ </tspan>AI client targeting &amp; ranking with Python, Ollama and Streamlit, fully on-prem</text></g>
+<g class="fade" style="animation-delay:0.8999999999999999s"><circle cx="58" cy="270" r="8" fill="#0E1530" stroke="#8B83F0" stroke-width="3"><animate attributeName="r" values="8;11;8" dur="2.4s" repeatCount="indefinite"/></circle><text x="88" y="276" class="t" font-size="20" font-weight="700" fill="#E6E4FA">Yottec System LLP</text><text x="960" y="276" text-anchor="end" class="m" font-size="13" fill="#A9B4D0">Jan 2025 – Feb 2026</text><text x="88" y="300" class="t" font-size="15" font-weight="600" fill="#8B83F0">Junior Engineer – Project Coordinator</text><text x="88" y="328" class="t" font-size="14.5" fill="#A9B4D0"><tspan fill="#3FE0B5">▹ </tspan>Led defence software projects with the Ministry of Defence</text><text x="88" y="354" class="t" font-size="14.5" fill="#A9B4D0"><tspan fill="#3FE0B5">▹ </tspan>Designed real-time algorithms for mission-critical workflows</text><text x="88" y="380" class="t" font-size="14.5" fill="#A9B4D0"><tspan fill="#3FE0B5">▹ </tspan>Built Python + AWS automation tools; ran Agile/Scrum planning</text></g>
+<text x="88" y="418" class="t" font-size="12" fill="#A9B4D0" fill-opacity=".7">Defence work details are confidential.</text>
+</svg>

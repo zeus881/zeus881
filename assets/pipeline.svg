@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" width="1000" height="360" role="img" aria-label="Pipeline: retail backend → Phoenix app (Elixir/OTP) → MQTT broker → 100+ shelf-label devices; Keycloak and PostgreSQL inside Docker/Podman.">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E1530"/><stop offset="1" stop-color="#071F26"/></linearGradient>
+ <linearGradient id="tl" gradientUnits="userSpaceOnUse" x1="0" y1="96" x2="0" y2="398"><stop offset="0" stop-color="#3FE0B5"/><stop offset="1" stop-color="#8B83F0"/></linearGradient>
+ <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#fff" stroke-opacity=".035"/></pattern>
+</defs>
+<style>
+ .t{font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Arial,sans-serif} .m{font-family:'JetBrains Mono','Fira Code',Consolas,monospace}
+ .h{font-size:26px;font-weight:800;fill:#E6E4FA}
+ .fade{opacity:0;animation:fade .8s ease forwards}
+ @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+ .flow path{stroke-dasharray:6 8;animation:flow 1.4s linear infinite}@keyframes flow{to{stroke-dashoffset:-28}}
+ @media (prefers-reduced-motion:reduce){*{animation:none!important}.fade{opacity:1}}
+</style>
+<rect x=".5" y=".5" width="999" height="359" rx="16" fill="url(#bg)" stroke="#8B83F0" stroke-opacity=".25"/>
+<rect x="1" y="1" width="998" height="358" rx="16" fill="url(#grid)"/>
+<text x="40" y="54" class="t h">How I build: real-time ESL pipeline</text>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#3FE0B5"/></marker></defs>
+<g transform="translate(50,80)" class="t" font-size="13" fill="#E6E4FA" text-anchor="middle">
+ <rect x="190" y="30" width="330" height="210" rx="14" fill="none" stroke="#8B83F0" stroke-opacity=".4" stroke-dasharray="5 5"/>
+ <text x="355" y="232" font-size="11" fill="#A9B4D0">Docker / Podman</text>
+ <rect x="10" y="90" width="140" height="56" rx="10" fill="#141D3E" stroke="#58A6FF"/>
+ <text x="80" y="114">Retail backend</text><text x="80" y="132" font-size="11" fill="#A9B4D0">POS updates</text>
+ <rect x="220" y="90" width="140" height="56" rx="10" fill="#141D3E" stroke="#8B83F0"/>
+ <text x="290" y="114">Phoenix app</text><text x="290" y="132" font-size="11" fill="#A9B4D0">Elixir / OTP</text>
+ <rect x="390" y="50" width="110" height="46" rx="10" fill="#141D3E" stroke="#8B83F0" stroke-opacity=".7"/>
+ <text x="445" y="72">Keycloak</text><text x="445" y="88" font-size="10" fill="#A9B4D0">OAuth2 + RBAC</text>
+ <rect x="390" y="150" width="110" height="46" rx="10" fill="#141D3E" stroke="#8B83F0" stroke-opacity=".7"/>
+ <text x="445" y="178">PostgreSQL</text>
+ <rect x="570" y="90" width="120" height="56" rx="28" fill="#3FE0B5" fill-opacity=".12" stroke="#3FE0B5">
+  <animate attributeName="fill-opacity" values=".08;.3;.08" dur="2s" repeatCount="indefinite"/></rect>
+ <text x="630" y="114" fill="#3FE0B5" font-weight="700">MQTT</text><text x="630" y="132" font-size="11" fill="#A9B4D0">broker</text>
+ <g fill="#141D3E" stroke="#3FE0B5" stroke-opacity=".7">
+  <rect x="760" y="30" width="130" height="40" rx="8"/><rect x="760" y="98" width="130" height="40" rx="8"/><rect x="760" y="166" width="130" height="40" rx="8"/></g>
+ <text x="825" y="55">ESL device 1</text><text x="825" y="123">ESL device 2</text><text x="825" y="191">100+ devices</text>
+ <g stroke="#3FE0B5" stroke-width="2" fill="none" marker-end="url(#ar)" class="flow">
+  <path id="p1" d="M150 118H218"/><path id="p2" d="M360 118H568"/>
+  <path id="p3" d="M690 118C725 118 725 50 758 50"/><path id="p4" d="M690 118H758"/><path id="p5" d="M690 118C725 118 725 186 758 186"/></g>
+ <g stroke="#8B83F0" stroke-opacity=".6" stroke-width="1.5" fill="none"><path d="M330 90C340 73 365 73 388 73"/><path d="M330 146C340 173 365 173 388 173"/></g>
+ <text x="459" y="110" font-size="11" fill="#A9B4D0">publish</text><text x="725" y="104" font-size="11" fill="#A9B4D0">subscribe</text>
+ <g fill="#E9FFF8">
+  <circle r="4"><animateMotion dur="1.2s" repeatCount="indefinite" path="M150 118H218"/></circle>
+  <circle r="4"><animateMotion dur="1.6s" begin=".4s" repeatCount="indefinite" path="M360 118H568"/></circle>
+  <circle r="4"><animateMotion dur="1.2s" begin=".8s" repeatCount="indefinite" path="M690 118C725 118 725 50 758 50"/></circle>
+  <circle r="4"><animateMotion dur="1.2s" begin="1s" repeatCount="indefinite" path="M690 118H758"/></circle>
+  <circle r="4"><animateMotion dur="1.2s" begin="1.2s" repeatCount="indefinite" path="M690 118C725 118 725 186 758 186"/></circle>
+ </g>
+</g>
+</svg>

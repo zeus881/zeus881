@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" width="860" height="340" role="img" aria-label="Terminal: whoami — Sanjay Kumar, Software Engineer">
+<style>text{font-family:'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;font-size:14px}</style>
+<rect x=".5" y=".5" width="859" height="339" rx="14" fill="#0E1530" stroke="#8B83F0" stroke-opacity=".3"/>
+<path d="M.5 14.5a14 14 0 0 1 14-14h831a14 14 0 0 1 14 14v22H.5z" fill="#141D3E"/>
+<circle cx="24" cy="19" r="6" fill="#FF5F57"/><circle cx="44" cy="19" r="6" fill="#FEBC2E"/><circle cx="64" cy="19" r="6" fill="#28C840"/>
+<text x="430" y="24" text-anchor="middle" fill="#A9B4D0" style="font-size:12px">sanjay@zeus881: ~</text>
+<clipPath id="c0"><rect x="28" y="57" height="24" width="0"><animate attributeName="width" values="0;0;73;73;0" keyTimes="0;0.0300;0.0465;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="74" clip-path="url(#c0)"><tspan fill="#3FE0B5">$ </tspan><tspan fill="#E6E4FA">whoami</tspan></text>
+<clipPath id="c1"><rect x="28" y="81" height="24" width="0"><animate attributeName="width" values="0;0;418;418;0" keyTimes="0;0.0640;0.0715;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="98" clip-path="url(#c1)"><tspan fill="#E6E4FA">Sanjay Kumar, Software Engineer @ Rebhu Computing</tspan></text>
+<clipPath id="c2"><rect x="28" y="105" height="24" width="0"><animate attributeName="width" values="0;0;132;132;0" keyTimes="0;0.0990;0.1347;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="122" clip-path="url(#c2)"><tspan fill="#3FE0B5">$ </tspan><tspan fill="#E6E4FA">cat focus.txt</tspan></text>
+<clipPath id="c3"><rect x="28" y="129" height="24" width="0"><animate attributeName="width" values="0;0;544;544;0" keyTimes="0;0.1522;0.1598;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="146" clip-path="url(#c3)"><tspan fill="#A9B4D0">distributed backends | real-time IoT | secure cloud | local LLMs</tspan></text>
+<clipPath id="c4"><rect x="28" y="153" height="24" width="0"><animate attributeName="width" values="0;0;317;317;0" keyTimes="0;0.1872;0.2835;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="170" clip-path="url(#c4)"><tspan fill="#3FE0B5">$ </tspan><tspan fill="#E6E4FA">mqtt pub retail/esl/+/price --qos 1</tspan></text>
+<clipPath id="c5"><rect x="28" y="177" height="24" width="0"><animate attributeName="width" values="0;0;384;384;0" keyTimes="0;0.3010;0.3085;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="194" clip-path="url(#c5)"><tspan fill="#3FE0B5">✓ price + barcode synced to 100+ shelf labels</tspan></text>
+<clipPath id="c6"><rect x="28" y="201" height="24" width="0"><animate attributeName="width" values="0;0;392;392;0" keyTimes="0;0.3360;0.4570;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="218" clip-path="url(#c6)"><tspan fill="#3FE0B5">$ </tspan><tspan fill="#E6E4FA">git log --author=me --grep=defence --oneline</tspan></text>
+<clipPath id="c7"><rect x="28" y="225" height="24" width="0"><animate attributeName="width" values="0;0;527;527;0" keyTimes="0;0.4745;0.4820;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="242" clip-path="url(#c7)"><tspan fill="#B9B3FF">a1f3c9e  real-time algorithms for Ministry of Defence projects</tspan></text>
+<clipPath id="c8"><rect x="28" y="249" height="24" width="0"><animate attributeName="width" values="0;0;115;115;0" keyTimes="0;0.5095;0.5397;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="266" clip-path="url(#c8)"><tspan fill="#3FE0B5">$ </tspan><tspan fill="#E6E4FA">echo $MOTTO</tspan></text>
+<clipPath id="c9"><rect x="28" y="273" height="24" width="0"><animate attributeName="width" values="0;0;317;317;0" keyTimes="0;0.5573;0.5647;0.97;1" dur="20.0s" repeatCount="indefinite"/></rect></clipPath>
+<text x="28" y="290" clip-path="url(#c9)"><tspan fill="#58A6FF">Systems that scale, secure, and last.</tspan></text>
+<text x="28" y="314" fill="#3FE0B5" opacity="0">$<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.5922;0.5932;0.97;1" dur="20.0s" repeatCount="indefinite"/></text>
+<rect x="46" y="300" width="9" height="17" fill="#3FE0B5"><animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></rect>
+</svg>
